@@ -46,6 +46,7 @@ Response body example for 400(Bad Request):
 
 
 **2. API Operation – Update **
+
 If user provides the name of the existing container and file, user can alter the content of the file (overwrite)
 Implemented as HTTP PATCH action
 
@@ -110,7 +111,7 @@ All http 400 and 404 errors return response body using the template below
 Error Response JSON:
 {
 	"errorNumber":<error number>,
-	"parameterName":" <name of parameter that caused the error>",
+	"parameterName": " <name of parameter that caused the error>" ,
 	"parameterValue":"<value of parameter that caused the error>",
 	"errorDescription":"<Description of the error intended developer consumption>"
 }
