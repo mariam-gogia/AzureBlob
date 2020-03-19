@@ -35,10 +35,10 @@ Response body example for 400(Bad Request):
 
 <pre>
 { 
-       “errorNumber” : 2
-       “parameterName” : “taskName”,
-       “parameterValue” :“<value provided that cause the error>”,
-       “errorDescription” : “The parameter is too large”
+       “errorNumber” : error number
+       “parameterName” : “parameter name”,
+       “parameterValue” :“value provided that cause the error”,
+       “errorDescription” : “error description ”
 }
 </pre>
 
@@ -93,10 +93,10 @@ Responses:
 1. 200 (OK) response body:
 [ 
    { 
-      "name": "<fileName>"
+      "name": "fileName"
    },
    { 
-      "name": "<fileName>"
+      "name": "fileName"
 ]
    
 </pre>
@@ -110,10 +110,10 @@ All http 400 and 404 errors return response body using the template below
 <pre>
 Error Response JSON:
 {
-	"errorNumber":<error number>,
-	"parameterName": " <name of parameter that caused the error>" ,
-	"parameterValue":"<<value of parameter that caused the error>>",
-	"errorDescription":"\<Description of the error>"
+	"errorNumber": error number,
+	"parameterName": " name of parameter that caused the error" ,
+	"parameterValue":"value of parameter that caused the error",
+	"errorDescription":"Description of the error"
 }
 </pre>
 
