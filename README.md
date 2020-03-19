@@ -112,8 +112,8 @@ Error Response JSON:
 {
 	"errorNumber":<error number>,
 	"parameterName": " <name of parameter that caused the error>" ,
-	"parameterValue":"<value of parameter that caused the error>",
-	"errorDescription":"<Description of the error intended developer consumption>"
+	"parameterValue":"<<value of parameter that caused the error>>",
+	"errorDescription":"<<Description of the error intended developer consumption>>"
 }
 </pre>
 
