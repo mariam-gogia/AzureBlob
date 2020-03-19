@@ -60,7 +60,7 @@ Responses:
 3. 404 (NotFound) – returns if entity cannot be found
 </pre>
 
-**4. API Operation – Delete**
+**3. API Operation – Delete**
 
 Deletes the blob (file) from the contianer
 Implemented as HTTP DELETE action
@@ -103,13 +103,14 @@ Responses:
 
 
 **Errors**
+
 All http 400 and 404 errors return response body using the template below
 
 <pre>
 Error Response JSON:
 {
 	"errorNumber":<error number>,
-	"parameterName":"<name of parameter that caused the error>",
+	"parameterName":" <name of parameter that caused the error>",
 	"parameterValue":"<value of parameter that caused the error>",
 	"errorDescription":"<Description of the error intended developer consumption>"
 }
