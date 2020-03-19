@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ContentFiles</name>
+    </assembly>
+    <members>
+        <member name="P:ContentFiles.Controllers.ContentFilesController.StorageConnectionString">
+            <summary>
+            Gets the storage connection string.
+            </summary>
+            <value>
+            The storage connection string.
+            </value>
+        </member>
+        <member name="M:ContentFiles.Controllers.ContentFilesController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ContentFiles.Controllers.ContentFilesController" /> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+        </member>
+        <member name="T:ContentFiles.Controllers.ContentFilesController.BlobName">
+            <summary>
+            Defines the blob note response providing only the name
+            </summary>
+        </member>
+        <member name="P:ContentFiles.Controllers.ContentFilesController.BlobName.Name">
+            <summary>
+            Gets or sets the blob name.
+            </summary>
+            <value>The blob's name.</value>
+        </member>
+        <member name="M:ContentFiles.Controllers.ContentFilesController.PutFile(Microsoft.AspNetCore.Http.IFormFile,System.String,System.String)">
+            <summary>
+            Creates a new container and file if they do not exist, if the file exists - it updates it.
+            </summary>
+            <param name="file"> File upload </param>
+            <param name="containername"> Name of the container</param>
+            <param name="fileName"> Name of the file </param>
+            <returns> The location of the created blob  </returns>
+        </member>
+        <member name="M:ContentFiles.Controllers.ContentFilesController.UpdateFile(Microsoft.AspNetCore.Http.IFormFile,System.String,System.String)">
+            <summary>
+            Updates the already existing file's content
+            </summary>
+            <param name="file"> Name of the file upload </param>
+            <param name="containername"> Name of the container </param>
+            <param name="fileName"> Name of the file to be updated </param>
+            <returns> update confirmation </returns>
+        </member>
+        <member name="M:ContentFiles.Controllers.ContentFilesController.VerifyParameters(Microsoft.AspNetCore.Http.IFormFile,System.String,System.String)">
+            <summary>
+            Helper method to verify validity of user entered parameters
+            </summary>
+            <param name="file"> Name of the file upload </param>
+            <param name="containername"> Name of the container </param>
+            <param name="fileName"> Name of the file </param>
+            <returns> ErrorResponse object with proper error given the parameters </returns>
+        </member>
+        <member name="M:ContentFiles.Controllers.ContentFilesController.ValidateContainerName(System.String)">
+            <summary>
+            Validating container name
+            </summary>
+            <param name="containername"> the name of the container</param>
+            <returns>returns error if container has invalid characters</returns>
+        </member>
+        <member name="M:ContentFiles.Controllers.ContentFilesController.Delete(System.String,System.String)">
+            <summary>
+            Deletes the existing file in the container
+            </summary>
+            <param name="containername"> Name of the container </param>
+            <param name="fileName"> Name of the file </param>
+            <returns> Deletes the file </returns>
+        </member>
+        <member name="M:ContentFiles.Controllers.ContentFilesController.GetByFileNameAsync(System.String,System.String)">
+            <summary>
+            Retrieves file by its name
+            </summary>
+            <param name="containername"> Name of the container</param>
+            <param name="fileName"> Name of the file</param>
+            <returns> return content file </returns>
+        </member>
+        <member name="M:ContentFiles.Controllers.ContentFilesController.GetAll(System.String)">
+            <summary>
+            Retrieves all files in the container
+            </summary>
+            <param name="containername"> Name of the container </param>
+            <returns> List of file names in the container</returns>
+        </member>
+        <member name="M:ContentFiles.Controllers.ContentFilesController.GetBlobNames(Microsoft.Azure.Storage.Blob.CloudBlobContainer,System.Collections.Generic.List{ContentFiles.Controllers.ContentFilesController.BlobName})">
+            <summary>
+            Gets the BLOB names.
+            </summary>
+            <param name="container">The container.</param>
+            <param name="blobNames">The BLOB names.</param>
+        </member>
+        <member name="P:ContentFiles.DataTransferObjects.ErrorResponse.errorNumber">
+            <summary>
+            The number representing the error
+            </summary>
+        </member>
+        <member name="P:ContentFiles.DataTransferObjects.ErrorResponse.parameterName">
+            <summary>
+            Name of the parameter where the error occured
+            </summary>
+        </member>
+        <member name="P:ContentFiles.DataTransferObjects.ErrorResponse.parameterValue">
+            <summary>
+            The value that caused the error in the parameter
+            </summary>
+        </member>
+        <member name="P:ContentFiles.DataTransferObjects.ErrorResponse.errorDescription">
+            <summary>
+            The descreption of the error
+            </summary>
+        </member>
+    </members>
+</doc>
