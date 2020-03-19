@@ -105,8 +105,8 @@ Responses:
 
 **Errors**
 
-All http 400 and 404 errors return response body using the template below
-
+All http 400 and 404 errors return response body using the template below.
+Error responses are manually created and numbers are arbitrarily assigned to them.
 <pre>
 Error Response JSON:
 {
